@@ -18,13 +18,13 @@
             <h3>Carlos Eduado Vijil Maldonado</h3>
         </div>
         <nav>
-            <a href="#Acerca_mi" class="nav">Sobre mi</a>
-            <a href="#skills" class="nav">Skills</a>
-            <a href="#soft_skills" class="nav">Soft Skills</a>
-            <a href="#hobbies" class="nav">Hobbies</a>
-            <a href="#formacion" class="nav">Formacion</a>
-            <a href="#experiencia" class="nav">Proyectos</a>
-            <a href="#contactame" class="nav" id="contacto">dryblackbones@gmail.com</a>
+            <a class="nav" onclick="linktopage('Acerca_mi')">Sobre mi</a>
+            <a class="nav" onclick="linktopage('skills')">Skills</a>
+            <a class="nav" onclick="linktopage('soft_skills')">Soft</a>
+            <a class="nav" onclick="linktopage('hobbies')">Hobbies</a>
+            <a class="nav" onclick="linktopage('formacion')">Formacion</a>
+            <a class="nav" onclick="linktopage('experiencia')">Proyectos</a>
+            <a class="nav" id="contacto" onclick="linktopage('contactame')">dryblackbones@gmail.com</a>
         </nav>
     </div>
 </header>
@@ -38,8 +38,8 @@
                 <h1>Hola mi nombre es Carlos Eduardo Vijil Maldonado y soy Desarollador Web</h1>
                 <p>Soy formado en una escuela bilingue y actualmente estoy cursando la carrera de Ingenieria en Sistemas y el Proyecto Oracle One en Alura Latam</p>
                 <ul class="cabecera_contatco">
-                    <li><a href="#"><p>Github</p><img src="img/link.PNG" alt="entrar_icono"></a></li>
-                    <li><a href="#"><p>Linkedin</p><img src="img/link.PNG" alt="entrar_icono"></a></li>
+                    <li><a href="https://github.com/karurosu-vihir"><p>Github</p><img src="img/link.PNG" alt="entrar_icono"></a></li>
+                    <li><a href="www.linkedin.com/in/carlos-eduardo-vijil-maldonado-3931582ab"><p>Linkedin</p><img src="img/link.PNG" alt="entrar_icono"></a></li>
                 </ul>
             </div>
             <img src="img/logo.jpg" alt="Imagen de cabecera" class="imagen_cabeza">
@@ -177,8 +177,8 @@
                         <h3>Tienda de Ropa</h3>
                         <p>Proyecto de Implementación - UNICAH</p>
                         <div class="botones">
-                            <a href="#">Repositorio</a>
-                            <a href="#">Ver Demo</a>
+                            <a href="https://github.com/karurosu-vihir/Proyecto_Tienda">Repositorio</a>
+                            <!-- <a href="#">Ver Demo</a> -->
                         </div>
                     </div>
                 </div>
@@ -188,8 +188,8 @@
                         <h3>Agenda</h3>
                         <p>Trabajo de Implementación - UNICAH</p>
                         <div class="botones">
-                            <a href="#">Repositorio</a>
-                            <a href="#">Ver Demo</a>
+                            <a href="https://github.com/karurosu-vihir/impl-agenda">Repositorio</a>
+                            <!-- <a href="#">Ver Demo</a> -->
                         </div>
                     </div>
                 </div>
@@ -199,8 +199,8 @@
                         <h3>Desafio Encriptador</h3>
                         <p>Desafio - Alura One</p>
                         <div class="botones">
-                            <a href="#">Repositorio</a>
-                            <a href="#">Ver Demo</a>
+                            <a href="https://github.com/karurosu-vihir/desafio-aluraone-encriptador">Repositorio</a>
+                            <a href="https://karurosu-vihir.github.io/desafio-aluraone-encriptador/">Ver Demo</a>
                         </div>
                     </div>
                 </div>
@@ -211,10 +211,10 @@
             <h2 class="subtitulo">Contactame</h2>
             <p>Si quieres contactarme completa el siguiente formulario:</p>
             <div class="espacio"></div>
-            <form action="#" class="formulario">
+            <form action="#" class="formulario" id="form">
                 <section>
                     <input type="text" id="title_nombre" class="title_input" placeholder="Nombre:" readonly>
-                    <input id="nombre" class="input" type="text" placeholder="Ingrese su nombre">
+                    <input id="nombre" class="input" type="text" placeholder="Ingrese su nombre" maxlength="50">
                 </section>
                 <section>
                     <input type="text" id="title_mail" class="title_input" placeholder="E-mail:" readonly>
@@ -222,13 +222,13 @@
                 </section>
                 <section>
                     <input type="text" id="title_asunto" class="title_input" placeholder="Asunto:" readonly>
-                    <input id="asunto" class="input" type="text" placeholder="Ingrese el asunto de contactarme">
+                    <input id="asunto" class="input" type="text" placeholder="Ingrese el asunto de contactarme" maxlength="50">
                 </section>
                 <section>
                     <input type="text" id="title_mensaje" class="title_input" placeholder="Mensaje:" readonly>
-                    <textarea id="mensaje" class="input" cols="30" rows="5" placeholder="Ingresa un mensaje"></textarea>
+                    <textarea id="mensaje" class="input" cols="30" rows="5" placeholder="Ingresa un mensaje" maxlength="300"></textarea>
                 </section>
-                <input type="submit" value="Mandar" class="submit">
+                <input type="submit" value="Mandar" class="submit" id="submit">
             </form>
         </div>
 </body>

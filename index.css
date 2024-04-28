@@ -49,6 +49,19 @@ nav{
     font-size: 18px;
 }
 
+nav a{
+    transition: 0.5s;
+}
+
+nav a:hover{
+    cursor: pointer;
+    padding: 5px;
+    border: 3px solid navy;
+    border-radius: 20px;
+    background-color: navy;
+    color: white;
+}
+
 #contacto{
     font-weight: bold;
 }
@@ -101,6 +114,11 @@ nav{
     display: flex;
     flex-direction: row;
     gap: 10px;
+    transition: 0.5s transform;
+}
+
+.cabecera_contatco a:hover{
+    transform: scale(1.6);
 }
 
 .cabecera_contatco img{
@@ -266,7 +284,7 @@ h2{
 
 .exp_contenido img{
     height: 404px;
-    width: 750px;
+    width: 60%;
     flex-shrink: 2;
 }
 
@@ -307,11 +325,21 @@ h2{
 .botones a:first-child{
     background-color: white;
     color: navy;
+    transition: 0.5s transform;
+}
+
+.botones a:first-child:hover{
+    transform: scale(1.3);
 }
 
 .botones a:last-child{
     background-color: navy;
     color: white;
+    transition: 0.5s transform;
+}
+
+.botones a:last-child:hover{
+    transform: scale(1.3);
 }
 
 /* contactame */
@@ -342,6 +370,13 @@ section{
 section input{
     padding: 5px;
     font-size: 20px;
+    border: none;
+}
+
+.input:focus{
+    border: none;
+    outline-width: 0;
+    border-bottom: 3px solid navy;
 }
 
 .submit{
@@ -351,6 +386,11 @@ section input{
     color: white;
     font-weight: bold;
     font-size: 20px;
+    transition: 0.5s transform;
+}
+
+.submit:hover{
+    transform: scale(1.3);
 }
 
 /* pie */
@@ -360,4 +400,33 @@ section input{
     justify-content: center;
     align-items: center;
     padding: 30px 10px;
+}
+
+/* Tablet a telefono */
+@media (max-width:1024px){
+    /* cabecera */
+    nav > *:not(:last-child){
+        display: none;
+    }
+    /* Sobre Mi */
+    .cabecera_titulo{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+    /* Acerca de mi */
+    .Acerca_mi{
+        padding-right: 120px;
+    }
+    /* Experiencia Laboral */
+    .exp_contenido{
+        flex-direction: column;
+    }
+    .exp_contenido img{
+        width: 75%;
+    }
+    .experiencia .exp_contenido:nth-child(4) {    
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }
