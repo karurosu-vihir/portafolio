@@ -263,8 +263,12 @@ h2{
 
 /* Experiencia Laboral */
 .experiencia{
-    padding: 60px 120px;
-    background-color: #d6e2d6;
+  padding: 60px 120px;
+  background-color: #d6e2d6;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -272,20 +276,20 @@ h2{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 30px;
     margin-bottom: 80px;
 }
 
 .experiencia .exp_contenido:nth-child(4) {    
     flex-direction: row-reverse;
-    justify-content: flex-end;
 }
 
 .exp_contenido img{
-    height: 404px;
-    width: 60%;
+    max-height: 500px;
+    width: 50%;
     flex-shrink: 2;
+    object-fit: contain;
 }
 
 .exp_subcontenido{
@@ -313,6 +317,7 @@ h2{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
+    gap: 40px;
 }
 
 .botones a{
@@ -379,12 +384,22 @@ section input{
     border-bottom: 3px solid navy;
 }
 
+form .botones_form{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 50px;
+    justify-content: center;
+}
+
 .submit{
-    padding: 15px;
+    padding: 20px;
+    height: 80px;
+    width: 150px;
     align-self: flex-start;
     background-color: navy;
     color: white;
     font-weight: bold;
+    border-radius: 2rem;
     font-size: 20px;
     transition: 0.5s transform;
 }
@@ -423,10 +438,24 @@ section input{
         flex-direction: column;
     }
     .exp_contenido img{
-        width: 75%;
+        width: 100%;
     }
     .experiencia .exp_contenido:nth-child(4) {    
         flex-direction: column;
         justify-content: flex-start;
+    }
+}
+
+@media (max-width:600px)
+{
+    .cabecera_contatco{
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experiencia{
+        padding: 60px 20px;
     }
 }
